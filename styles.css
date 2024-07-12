@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: radial-gradient(circle, #ff9999 0%, #ff3333 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/girassois.jpg'); /* Substitua com o caminho da sua imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; /* Ajuste a opacidade conforme necessário */
+    z-index: -1;
+}
+
+.container {
+    text-align: center;
+    width: 500px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.photo-frame {
+    border: 3px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+    display: inline-block;
+    margin-bottom: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.photo-frame img {
+    width: 250px;
+    height: auto;
+    transition: transform 0.5s ease-in-out;
+}
+
+.photo-frame img:hover {
+    transform: scale(1.1);
+}
+
+.decorations {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.heart {
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    position: absolute;
+    transform: rotate(-45deg);
+    animation: float 5s infinite ease-in-out;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart::before {
+    top: -20px;
+    left: 0;
+}
+
+.heart::after {
+    left: 20px;
+    top: 0;
+}
+
+.heart1 {
+    top: 0;
+    left: 15%;
+    animation-delay: 0s;
+}
+
+.heart2 {
+    top: 8%;
+    left: 50%;
+    animation-delay: 1s;
+}
+
+.heart3 {
+    top: 16%;
+    left: 85%;
+    animation-delay: 2s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-80px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.petal {
+    width: 12px;
+    height: 12px;
+    background-color: pink;
+    position: absolute;
+    border-radius: 50%;
+    animation: fall 4s infinite ease-in-out;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(150px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+footer {
+    margin-top: 15px;
+    font-size: 1.5em;
+    text-shadow: 1px 1px 2px #000;
+}
